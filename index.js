@@ -1,7 +1,7 @@
 const reader = require('xlsx');
 const fs = require('fs');
 
-const file = reader.readFile('./test.xls');
+const file = reader.readFile('./convert.xls');
 const sheets = file.SheetNames;
 
 var data = [];
@@ -13,6 +13,6 @@ for (let i = 0; i < sheets.length; i++) {
   });
 }
 
-fs.writeFileSync(`./test.json`, data, (res) => {
+fs.writeFileSync(`./output.json`, data, (res) => {
   res && console.log(res);
 });
