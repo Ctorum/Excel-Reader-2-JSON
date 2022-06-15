@@ -13,6 +13,6 @@ for (let i = 0; i < sheets.length; i++) {
   });
 }
 
-fs.writeFileSync(`./output.json`, data, (res) => {
+fs.writeFileSync(`./output.json`, JSON.stringify(data), (res) => {
   res && console.log(res);
 });
